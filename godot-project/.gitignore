@@ -1,0 +1,39 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# System-specific junk files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Godot-specific cache and temporary files
+.import/
+*.godot/imported/
+*.godot/mono/
+*.godot/mono/temp/
+*.godot/mono/logs/
+*.godot/mono/.mono/
+
+# Godot editor configuration (personal settings, shouldn't be shared)
+*.godot/editor_settings-*.tres
+*.godot/editor_layout.cfg
+
+# Exported builds (optional, unless you want to track these)
+builds/
+exported/
+
+# Compiled scripts or generated files (if using C#)
+bin/
+*.mono/
+*.mono-debug/
+*.mono-debug.sln
+.mono/
+
+# Godot crash logs (not useful to track in Git)
+crash_dump.*
+
+# Backup files (Godot sometimes generates these)
+*.godot.backup
+*.remap
+*.translation
