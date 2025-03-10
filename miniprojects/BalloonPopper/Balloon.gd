@@ -10,4 +10,8 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 		clicks_to_pop -= 1
 		if clicks_to_pop == 0:
 			get_node("/root/Main").increase_score(score_to_give)
+			get_parent().get_node("PopSound").play()
+			#$AudioStreamPlayer.play()
+			#$Main.PopSound.play()
+			#$PopSound.play()
 			queue_free()
