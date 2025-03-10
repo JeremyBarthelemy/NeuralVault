@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://xcpumbrgerpq"]
+[gd_scene load_steps=6 format=3 uid="uid://xcpumbrgerpq"]
 
 [ext_resource type="Script" uid="uid://b22tmqgdrrw5x" path="res://BalloonPopper/BalloonManager.gd" id="1_20san"]
 [ext_resource type="PackedScene" uid="uid://cscvk3xmx01lu" path="res://BalloonPopper/Balloon.tscn" id="2_80j25"]
 [ext_resource type="AudioStream" uid="uid://cu3svpnnrrgki" path="res://BalloonPopper/balloon_pop.ogg" id="3_20san"]
+[ext_resource type="AudioStream" uid="uid://ctypfsvm7q7h4" path="res://BalloonPopper/Adventure.mp3" id="3_pkw4a"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_80j25"]
 font_size = 55
@@ -11,14 +12,18 @@ font_size = 55
 script = ExtResource("1_20san")
 score_text = NodePath("ScoreText")
 
+[node name="BackgroundMusic" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.264694, 0.419895, -0.0130992)
+stream = ExtResource("3_pkw4a")
+
 [node name="Balloon" parent="." instance=ExtResource("2_80j25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.264694, 0.419895, -0.0130992)
-clicks_to_pop = 3
+clicks_to_pop = 4
 size_increase = 0.5
 
 [node name="Balloon2" parent="." instance=ExtResource("2_80j25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.21449, 1.05277, -0.0229583)
-clicks_to_pop = 8
+clicks_to_pop = 17
 size_increase = 0.1
 
 [node name="Balloon3" parent="." instance=ExtResource("2_80j25")]
@@ -31,8 +36,8 @@ size_increase = 0.1
 
 [node name="Balloon5" parent="." instance=ExtResource("2_80j25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16203, -0.97578, 0)
-clicks_to_pop = 7
-size_increase = 0.15
+clicks_to_pop = 8
+size_increase = 0.1
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.20157)
