@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://xcpumbrgerpq"]
+
+[ext_resource type="Script" uid="uid://b22tmqgdrrw5x" path="res://BalloonPopper/BalloonManager.gd" id="1_20san"]
+[ext_resource type="Script" uid="uid://dwqa05q5ni8hd" path="res://BalloonPopper/Balloon.gd" id="1_80j25"]
+[ext_resource type="Material" uid="uid://dqxp0hn4qsseh" path="res://BalloonPopper/Balloon.tres" id="1_uf6v3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_k3hsi"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_uf6v3"]
+
+[sub_resource type="PlaceholderMaterial" id="PlaceholderMaterial_80j25"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_20san"]
+next_pass = SubResource("PlaceholderMaterial_80j25")
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_20san")
+
+[node name="Balloon" type="Area3D" parent="."]
+script = ExtResource("1_80j25")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balloon"]
+shape = SubResource("SphereShape3D_k3hsi")
+
+[node name="Model" type="MeshInstance3D" parent="Balloon"]
+material_override = ExtResource("1_uf6v3")
+mesh = SubResource("SphereMesh_uf6v3")
+surface_material_override/0 = SubResource("StandardMaterial3D_20san")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.64125)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.579329, 0.720367, -0.381378, -0.0991157, 0.526682, 0.844264, 0.809045, -0.451306, 0.376521, -1.24387, 1.53089, 0.760322)
+
+[connection signal="input_event" from="Balloon" to="Balloon" method="_on_input_event"]
