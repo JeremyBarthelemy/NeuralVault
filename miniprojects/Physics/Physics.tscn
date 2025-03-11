@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx6j77fwm411i"]
+
+[ext_resource type="PackedScene" uid="uid://dgl87hsbagtw3" path="res://Physics/PhysicsPlayer.tscn" id="1_ry666"]
+[ext_resource type="PackedScene" uid="uid://cw0vnm7trfuat" path="res://Physics/Crate.tscn" id="2_eghp1"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ry666")]
+
+[node name="Crate" parent="." instance=ExtResource("2_eghp1")]
+position = Vector2(13, 4)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
