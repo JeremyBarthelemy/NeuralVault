@@ -6,8 +6,11 @@
 
 [node name="Main" type="Node3D"]
 
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(12.0036, 0, 0, 0, 0.280966, 10.5412, 0, -0.105412, 28.0966, 0, 0, 0)
+
 [node name="Ground" type="StaticBody3D" parent="."]
-transform = Transform3D(12.0036, 0, 0, 0, 0.300089, 0, 0, 0, 30.0089, 0, 0, 0)
+transform = Transform3D(12.0036, 0, 0, 0, 0.280966, 10.5412, 0, -0.105412, 28.0966, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 mesh = SubResource("BoxMesh_ah2ec")
