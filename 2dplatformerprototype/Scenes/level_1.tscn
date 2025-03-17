@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://do45lwlfyr2p6"]
+[gd_scene load_steps=3 format=4 uid="uid://do45lwlfyr2p6"]
+
+[ext_resource type="Texture2D" uid="uid://cnig7spthrw4e" path="res://Sprites/Backgrounds/backgroundForest.png" id="1_8ffim"]
+[ext_resource type="TileSet" uid="uid://ckw3edbrr8rji" path="res://Sprites/Tiles/new_tile_set.tres" id="1_vk57k"]
 
 [node name="Main" type="Node2D"]
+
+[node name="BackgroundSprite" type="Sprite2D" parent="."]
+position = Vector2(369, 42)
+texture = ExtResource("1_8ffim")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD8/wAAAAABAAAAAAD9/wAAAAACAAAAAAD+/wAAAAACAAAAAAD//wAAAAACAAAAAAAAAAAAAAACAAAAAAABAAAAAAACAAAAAAACAAAAAAADAAAAAAAFAAEAAAABAAAAAAAGAAEAAAACAAAAAAAHAAEAAAACAAAAAAAIAAEAAAACAAAAAAAJAAEAAAACAAAAAAAKAAEAAAADAAAAAAANAAAAAAABAAEAAAAOAAAAAAACAAEAAAAPAAAAAAACAAEAAAAQAAAAAAACAAEAAAARAAAAAAACAAEAAAASAAAAAAACAAEAAAATAAAAAAACAAEAAAAUAAAAAAADAAEAAAAXAAAAAAAAAAAAAAAbAAAAAAAAAAAAAAAeAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAMAAAABAAAAAAAlAAMAAAACAAAAAAAmAAMAAAACAAAAAAAnAAMAAAACAAAAAAAoAAMAAAADAAAAAAA=")
+tile_set = ExtResource("1_vk57k")
