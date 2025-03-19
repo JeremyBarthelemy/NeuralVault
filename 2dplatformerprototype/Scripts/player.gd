@@ -12,6 +12,7 @@ var move_input : float
 # We could do this in the _on_ready function but this is nice too to shrink
 # down code a bit if we wish to
 @onready var sprite : Sprite2D = $Sprite
+@onready var anim : AnimationPlayer = $AnimationPlayer
 
 # For physics engine changes, use _physics_process(delta)
 func _physics_process(delta):
@@ -43,7 +44,25 @@ func _physics_process(delta):
 	# AFTER changing Character2DBody's velocity to properly update.
 	move_and_slide()
 
+
+		
 # Perform tasks which aren't really involved with the physics engine
 func _process(delta):
 	if velocity.x != 0:	
 		sprite.flip_h = velocity.x > 0
+	_manage_animation()
+
+
+func _manage_animation():
+	if not is_on_floor():
+		anim.play("jump")
+	elif move_input != 0:
+		anim.play("move")
+	else:
+		anim.play("idle")
+	# If idle, play idle animation
+	
+	# If moving, play moving animation
+	
+	# If jumping, play jump animation
+	
