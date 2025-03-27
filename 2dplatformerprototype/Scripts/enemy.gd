@@ -25,4 +25,5 @@ func _on_body_entered(body):
 	if not body.is_in_group("Player"):
 		return
 	
-	print("Deal damage to player!")
+	body.take_damage(1)
+	
