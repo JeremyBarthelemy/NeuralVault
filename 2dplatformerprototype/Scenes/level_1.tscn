@@ -1,14 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://do45lwlfyr2p6"]
+[gd_scene load_steps=6 format=4 uid="uid://do45lwlfyr2p6"]
 
 [ext_resource type="Texture2D" uid="uid://cnig7spthrw4e" path="res://Sprites/Backgrounds/backgroundForest.png" id="1_8ffim"]
 [ext_resource type="TileSet" uid="uid://ckw3edbrr8rji" path="res://Sprites/Tiles/new_tile_set.tres" id="1_vk57k"]
 [ext_resource type="PackedScene" uid="uid://qrsjliav7p0v" path="res://Scenes/Player.tscn" id="3_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://dh12siav863cq" path="res://Scenes/Enemy.tscn" id="4_7p6j4"]
-[ext_resource type="Texture2D" uid="uid://rc2xoxrveto4" path="res://Sprites/Objects/tile_0151.png" id="5_6444e"]
-[ext_resource type="Script" uid="uid://b0qgwu5jvwpim" path="res://Scripts/coin.gd" id="5_evi0p"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_evi0p"]
-radius = 6.08276
+[ext_resource type="PackedScene" uid="uid://dyfk1dufu8gny" path="res://Scenes/Coin.tscn" id="5_6444e"]
 
 [node name="Main" type="Node2D"]
 
@@ -31,13 +27,11 @@ position = Vector2(211, -6)
 [node name="Enemy3" parent="." instance=ExtResource("4_7p6j4")]
 position = Vector2(389, -38)
 
-[node name="Coin" type="Area2D" parent="."]
-position = Vector2(34, -32)
-script = ExtResource("5_evi0p")
-metadata/_edit_group_ = true
+[node name="Coin" parent="." instance=ExtResource("5_6444e")]
+position = Vector2(143, -20)
 
-[node name="Sprite" type="Sprite2D" parent="Coin"]
-texture = ExtResource("5_6444e")
+[node name="Coin2" parent="." instance=ExtResource("5_6444e")]
+position = Vector2(454, -41)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
-shape = SubResource("CircleShape2D_evi0p")
+[node name="Coin3" parent="." instance=ExtResource("5_6444e")]
+position = Vector2(625, 1)

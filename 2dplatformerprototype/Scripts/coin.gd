@@ -19,7 +19,12 @@ func _physics_process(delta):
 	# bob up and down
 	var y_pos = bob_height * (1 + sin(time * bob_speed))/2
 	global_position.y = start_pos.y - y_pos
+
+
+
+func _on_body_entered(body: Node2D):
+	if not body.is_in_group("Player"):
+		return
 	
-	
-	
-	
+	body.increase_score(1)
+	queue_free() # Deletes this coin
