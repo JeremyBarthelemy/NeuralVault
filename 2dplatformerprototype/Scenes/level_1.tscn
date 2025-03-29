@@ -19,3 +19,9 @@ tile_set = ExtResource("1_vk57k")
 
 [node name="Enemy" parent="." instance=ExtResource("4_7p6j4")]
 position = Vector2(70, -9)
+
+[node name="Enemy2" parent="." instance=ExtResource("4_7p6j4")]
+position = Vector2(211, -6)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_7p6j4")]
+position = Vector2(389, -38)
