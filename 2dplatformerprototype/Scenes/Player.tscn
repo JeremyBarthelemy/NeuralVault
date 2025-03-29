@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://qrsjliav7p0v"]
+[gd_scene load_steps=13 format=3 uid="uid://qrsjliav7p0v"]
 
 [ext_resource type="Script" uid="uid://cvt1s2ws0qhcm" path="res://Scripts/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://cbn7qdk6u0l3r" path="res://Sprites/Characters/character_0000.png" id="1_rpqav"]
 [ext_resource type="Texture2D" uid="uid://53oo2y43icsi" path="res://Sprites/Characters/character_0001.png" id="3_gntrk"]
+[ext_resource type="Script" uid="uid://lm33blmj4kw" path="res://Scripts/player_ui.gd" id="4_5ixxa"]
+[ext_resource type="Texture2D" uid="uid://cf3du81pus0nk" path="res://Sprites/Objects/tile_0044.png" id="4_dewec"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rpqav"]
 height = 24.0
@@ -77,6 +79,11 @@ _data = {
 &"move": SubResource("Animation_nn08x")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_dewec"]
+font_size = 38
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.47451)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_kyqiw")
 
@@ -99,3 +106,34 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("4_5ixxa")
+
+[node name="HealthContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_top = 2.0
+offset_right = 411.0
+offset_bottom = 82.0
+
+[node name="Heart" type="TextureRect" parent="CanvasLayer/HealthContainer"]
+layout_mode = 2
+texture = ExtResource("4_dewec")
+expand_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="CanvasLayer/HealthContainer"]
+layout_mode = 2
+texture = ExtResource("4_dewec")
+expand_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="CanvasLayer/HealthContainer"]
+layout_mode = 2
+texture = ExtResource("4_dewec")
+expand_mode = 2
+
+[node name="ScoreText" type="Label" parent="CanvasLayer"]
+offset_left = 21.0
+offset_top = 95.0
+offset_right = 228.0
+offset_bottom = 156.0
+text = "Score: 500"
+label_settings = SubResource("LabelSettings_dewec")
