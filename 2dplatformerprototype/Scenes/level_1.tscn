@@ -10,7 +10,27 @@
 [node name="Main" type="Node2D"]
 
 [node name="BackgroundSprite" type="Sprite2D" parent="."]
-position = Vector2(369, 42)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8ffim")
+
+[node name="BackgroundSprite2" type="Sprite2D" parent="."]
+position = Vector2(512, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8ffim")
+
+[node name="BackgroundSprite3" type="Sprite2D" parent="."]
+position = Vector2(1024, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8ffim")
+
+[node name="BackgroundSprite4" type="Sprite2D" parent="."]
+position = Vector2(-512, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8ffim")
+
+[node name="BackgroundSprite5" type="Sprite2D" parent="."]
+position = Vector2(-1024, 0)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_8ffim")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
