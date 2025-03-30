@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccnxf3lioecyw"]
+
+[ext_resource type="Texture2D" uid="uid://cnig7spthrw4e" path="res://Sprites/Backgrounds/backgroundForest.png" id="1_3kf3n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6pedr"]
+font_size = 48
+font_color = Color(1, 0.657667, 0.21, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.462745)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -271.0
+offset_right = 1148.0
+offset_bottom = 913.0
+texture = ExtResource("1_3kf3n")
+expand_mode = 4
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_top = -149.5
+offset_right = 238.0
+offset_bottom = -82.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "2D Platformer Game"
+label_settings = SubResource("LabelSettings_6pedr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -60.0
+offset_right = 53.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+
+[node name="PlayButton2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -1.0
+offset_right = 53.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
