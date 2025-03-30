@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccnxf3lioecyw"]
+[gd_scene load_steps=4 format=3 uid="uid://ccnxf3lioecyw"]
 
 [ext_resource type="Texture2D" uid="uid://cnig7spthrw4e" path="res://Sprites/Backgrounds/backgroundForest.png" id="1_3kf3n"]
+[ext_resource type="Script" uid="uid://daoqtnfuemdec" path="res://Scripts/menu.gd" id="1_6pedr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6pedr"]
 font_size = 48
@@ -17,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6pedr")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
@@ -60,7 +62,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Play"
 
-[node name="PlayButton2" type="Button" parent="."]
+[node name="QuitButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -74,3 +76,6 @@ offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Quit"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
