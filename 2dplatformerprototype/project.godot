@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2DPlatformerPrototype"
-run/main_scene="uid://do45lwlfyr2p6"
+run/main_scene="uid://ccnxf3lioecyw"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
 
