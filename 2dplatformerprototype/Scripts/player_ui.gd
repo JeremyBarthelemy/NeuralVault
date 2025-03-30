@@ -1,12 +1,13 @@
 extends CanvasLayer
 
+# The Player UI stuff really shouldn't be here as a child of Player
+
 @onready var health_container = $HealthContainer
 var hearts : Array = []
 
 @onready var score_text : Label = $ScoreText
 
 @onready var player = get_parent()
-
 
 func _ready():
 	# Populate heart container
